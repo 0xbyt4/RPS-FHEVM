@@ -208,16 +208,7 @@ function canJoinGame(uint256 gameId, address player) returns (bool)
 function getTotalGames() returns (uint256)
 ```
 
-## 🎨 Frontend Stack
 
-- **React 18** - UI framework
-- **Vite** - Build tool (5x faster than CRA)
-- **TypeScript** - Type safety
-- **Tailwind CSS** - Styling
-- **Wagmi + Viem** - Web3 integration
-- **Zustand** - State management
-- **Framer Motion** - Animations
-- **React Hot Toast** - Notifications
 
 ## 📈 Gas Estimates
 
@@ -227,25 +218,7 @@ function getTotalGames() returns (uint256)
 | Join Game | ~80,000 | Includes winner determination |
 | View Game | ~25,000 | Read-only operation |
 
-*Note: With full FHEVM integration, costs will be higher but provide complete privacy*
 
-## 🔮 Future Enhancements
-
-- [ ] Full FHEVM integration with `euint8` encrypted types
-- [ ] Zero-knowledge proof for input validation
-- [ ] Matchmaking system
-- [ ] ELO rating system
-- [ ] Tournament mode
-- [ ] NFT rewards for winners
-- [ ] Mobile app (React Native)
-- [ ] Betting system with encrypted amounts
-
-## 🐛 Known Limitations
-
-- Current version uses `uint8` instead of `euint8` for demonstration
-- Sepolia testnet only (no mainnet deployment yet)
-- Basic UI (more components coming soon)
-- No real-time updates (manual refresh needed)
 
 ## 📚 Resources
 
@@ -259,20 +232,8 @@ function getTotalGames() returns (uint256)
 - [Twitter](https://twitter.com/zama_fhe)
 - [Blog](https://www.zama.ai/blog)
 
-## 🛠️ Development
 
-### Project Generated With
 
-- **12+ AI Agents** researched FHEVM, design patterns, testing strategies
-- **Comprehensive Documentation** from Zama's official resources
-- **Modern Best Practices** following Hardhat and React guidelines
-
-### Built With
-
-- Hardhat for smart contract development
-- Vite for blazing fast frontend builds
-- TypeScript for type safety across the stack
-- Tailwind CSS for beautiful, responsive UI
 
 ## 📝 License
 
@@ -288,8 +249,4 @@ MIT License - feel free to use this project for learning and building!
 
 Questions? Feedback? Open an issue or reach out!
 
----
-
-**Made with ❤️ for the future of private blockchain applications**
-
-*Powered by Zama FHEVM*
+-

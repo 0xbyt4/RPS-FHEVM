@@ -239,21 +239,6 @@ Open: **http://localhost:3000**
 
 ---
 
-## 🔒 Security Checklist
-
-Before deploying to mainnet (when available):
-
-- [ ] Audit smart contract
-- [ ] Test thoroughly on testnet
-- [ ] Never expose private keys
-- [ ] Use hardware wallet for mainnet
-- [ ] Enable contract verification
-- [ ] Set up monitoring
-- [ ] Have emergency pause mechanism
-- [ ] Test with small amounts first
-
----
-
 ## 📈 Gas Costs (Estimated)
 
 | Operation | Gas | Cost (at 30 gwei) |
@@ -303,8 +288,4 @@ Before deploying to mainnet (when available):
 - **Discord:** Join Zama community
 - **Docs:** Check official documentation
 
----
 
-**Congratulations! 🎉 You've deployed a privacy-preserving game on Ethereum!**
-
-*Built with ❤️ using Zama FHEVM*
