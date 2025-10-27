@@ -200,6 +200,7 @@ function GameScreen() {
     chainId: chain?.id,
     chainName: chain?.name,
     isWrongNetwork,
+    selectedMove,
     currentGameId,
     game,
     isCreating,
