@@ -76,14 +76,15 @@ export function useGame(gameId?: number) {
   })
 
   // Convert array to object
+  const gameData = data as any
   const game = data ? {
-    player1: data[0] as string,
-    player2: data[1] as string,
-    move1Submitted: data[2] as boolean,
-    move2Submitted: data[3] as boolean,
-    state: data[4] as number,
-    winner: data[5] as string,
-    createdAt: data[6] as bigint,
+    player1: gameData[0] as string,
+    player2: gameData[1] as string,
+    move1Submitted: gameData[2] as boolean,
+    move2Submitted: gameData[3] as boolean,
+    state: gameData[4] as number,
+    winner: gameData[5] as string,
+    createdAt: gameData[6] as bigint,
   } : undefined
 
   return {
@@ -104,11 +105,12 @@ export function usePlayerStats(address?: `0x${string}`) {
     },
   })
 
+  const statsData = data as any
   return {
     stats: data as [bigint, bigint, bigint] | undefined,
-    wins: data ? Number(data[0]) : 0,
-    losses: data ? Number(data[1]) : 0,
-    draws: data ? Number(data[2]) : 0,
+    wins: data ? Number(statsData[0]) : 0,
+    losses: data ? Number(statsData[1]) : 0,
+    draws: data ? Number(statsData[2]) : 0,
     isLoading,
     refetch,
   }

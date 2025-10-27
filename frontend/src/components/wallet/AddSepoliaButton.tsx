@@ -56,7 +56,7 @@ export function AddSepoliaButton() {
         } else {
           // Network likely exists but is hidden
           toast(
-            (t) => (
+            () => (
               <div>
                 <p className="font-bold mb-2">Sepolia may be hidden</p>
                 <p className="text-sm text-slate-300 mb-2">

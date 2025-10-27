@@ -259,8 +259,6 @@ function GameScreen() {
 
   // Show game result if game is finished
   if (game && game.state === 2) {
-    const isPlayer1 = game.player1.toLowerCase() === address?.toLowerCase()
-    const isPlayer2 = game.player2.toLowerCase() === address?.toLowerCase()
     const isDraw = game.winner === '0x0000000000000000000000000000000000000000'
     const didWin = !isDraw && game.winner.toLowerCase() === address?.toLowerCase()
 
