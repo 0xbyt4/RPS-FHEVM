@@ -71,7 +71,14 @@ export function useGame(gameId?: number) {
     args: gameId !== undefined ? [BigInt(gameId)] : undefined,
     query: {
       enabled: gameId !== undefined,
-      refetchInterval: 5000, // Refetch every 5 seconds
+      // CRITICAL FIX: Stop polling when game is finished (state === 2)
+      refetchInterval: (query) => {
+        const gameData = query.state.data as any
+        if (gameData && gameData[4] === 2) {
+          return false // Game finished, stop polling
+        }
+        return 5000 // Continue polling every 5 seconds
+      },
     },
   })
 
@@ -87,8 +94,9 @@ export function useGame(gameId?: number) {
     createdAt: gameData[6] as bigint,
   } : undefined
 
+  // CRITICAL FIX: Clear game when gameId is undefined to prevent stale data
   return {
-    game,
+    game: gameId !== undefined ? game : undefined,
     isLoading,
     refetch,
   }

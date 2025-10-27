@@ -1,5 +1,5 @@
 import { WagmiProvider } from 'wagmi'
-import { QueryClientProvider } from '@tanstack/react-query'
+import { QueryClientProvider, useQueryClient } from '@tanstack/react-query'
 import { Toaster } from 'react-hot-toast'
 import { Gamepad2, Shield, Zap } from 'lucide-react'
 import { useState, useEffect } from 'react'
@@ -171,6 +171,7 @@ function WelcomeScreen() {
 
 function GameScreen() {
   const { address, chain } = useAccount()
+  const queryClient = useQueryClient()
   const [selectedMove, setSelectedMove] = useState<number | null>(null)
   const [currentGameId, setCurrentGameId] = useState<number | null>(null)
   const [gameIdInput, setGameIdInput] = useState('')
@@ -258,8 +259,8 @@ function GameScreen() {
     return 'Unknown state'
   }
 
-  // Show game result if game is finished
-  if (game && game.state === 2) {
+  // Show game result if game is finished (and we have a valid game ID)
+  if (game && game.state === 2 && currentGameId !== null) {
     const isDraw = game.winner === '0x0000000000000000000000000000000000000000'
     const didWin = !isDraw && game.winner.toLowerCase() === address?.toLowerCase()
 
@@ -297,6 +298,8 @@ function GameScreen() {
           {/* Play Again */}
           <button
             onClick={() => {
+              // CRITICAL FIX: Invalidate query cache to clear old game data
+              queryClient.invalidateQueries({ queryKey: ['readContract'] })
               setCurrentGameId(null)
               setSelectedMove(null)
               setGameIdInput('')
