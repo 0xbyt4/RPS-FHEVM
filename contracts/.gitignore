@@ -1,0 +1,23 @@
+# Dependencies
+node_modules/
+
+# Hardhat files
+cache/
+artifacts/
+typechain-types/
+
+# Environment variables - NEVER COMMIT
+.env
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+coverage.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

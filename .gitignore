@@ -1,0 +1,48 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+dist/
+build/
+out/
+artifacts/
+cache/
+typechain-types/
+
+# Misc
+.DS_Store
+*.log
+*.log.*
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Hardhat
+cache/
+artifacts/
+deployments/
+
+# Frontend specific
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Secrets
+*.key
+*.pem
+.env.*.local
+secrets.json

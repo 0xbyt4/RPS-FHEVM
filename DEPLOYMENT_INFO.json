@@ -1,0 +1,11 @@
+{
+  "contractAddress": "0xfa616B954DDEABc1297b981b918BAD5AAD65FE39",
+  "deployer": "0x1ff3d2358eDc5061fd79Bb81046DdD68e780D8A8",
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deployedAt": "2025-10-26T22:45:01.658Z",
+  "etherscanUrl": "https://sepolia.etherscan.io/address/0xfa616B954DDEABc1297b981b918BAD5AAD65FE39",
+  "rpcUrl": "https://ethereum-sepolia.publicnode.com",
+  "gasUsed": "~500,000",
+  "status": "deployed"
+}

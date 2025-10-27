@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F4C622;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad)"/>
+
+  <!-- Game controller/gamepad icon -->
+  <path d="M 30 35 Q 25 35 25 40 L 25 55 Q 25 60 30 60 L 40 60 L 40 50 L 45 50 L 45 60 L 55 60 L 55 50 L 60 50 L 60 60 L 70 60 Q 75 60 75 55 L 75 40 Q 75 35 70 35 Z"
+        fill="#0f172a"
+        stroke="#0f172a"
+        stroke-width="2"/>
+
+  <!-- D-pad (left) -->
+  <rect x="30" y="42" width="3" height="8" fill="#F4C622" rx="1"/>
+  <rect x="28" y="44" width="7" height="3" fill="#F4C622" rx="1"/>
+
+  <!-- Buttons (right) -->
+  <circle cx="62" cy="45" r="2.5" fill="#F4C622"/>
+  <circle cx="68" cy="45" r="2.5" fill="#F4C622"/>
+</svg>
